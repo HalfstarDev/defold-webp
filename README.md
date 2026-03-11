@@ -1,4 +1,4 @@
-# defold-webp
+# Defold-WebP
 
 A Defold extension for using WebP images. Uses [libwebp-1.6.0](https://github.com/webmproject/libwebp).
 
@@ -6,7 +6,7 @@ A Defold extension for using WebP images. Uses [libwebp-1.6.0](https://github.co
 
 This asset can be added as a [library dependency](https://defold.com/manuals/libraries/#setting-up-library-dependencies) in your project:
 
-* Use a specific version for development and release to avoid breaking changes: https://github.com/HalfstarDev/defold-webp/releases
+* Use a specific version for development and release to avoid breaking changes: https://github.com/HalfstarDev/defold-webp/archive/refs/tags/1.0.0.zip
 * Use the latest version only while evaluating and testing the asset: https://github.com/HalfstarDev/defold-webp/archive/master.zip
 
 For Android, the minimum SDK version is 21.
@@ -17,7 +17,7 @@ For Android, the minimum SDK version is 21.
 
 Decode a WebP image into an image buffer. Use optional Lua table with [WebPDecoderOptions](https://developers.google.com/speed/webp/docs/api#advanced_decoding_api) as keys. Returns buffer, width, and height.
 
-```
+```lua
 local buf, w, h = webp.decode(sys.load_resource("/assets/image_1.webp"))
 resource.set_texture(go.get("#sprite", "texture0"), {
     width        = w,
@@ -32,7 +32,7 @@ resource.set_texture(go.get("#sprite", "texture0"), {
 
 Encode a image buffer into a WebP image. Use optional Lua table with [WebPConfig](https://developers.google.com/speed/webp/docs/api#advanced_encoding_api) fields as keys. Returns string with WebP image.
 
-```
+```lua
 local buf, w, h = webp.decode(image)
 local webp_image = webp.encode(buf, w, h, {quality = 50})
 local f = io.open("out.webp", "wb")
@@ -45,7 +45,7 @@ end
 #### webp.get_info(image)
 
 Get information about a WebP image. Returns table with following fields: width, height, has_alpha, has_animation, lossy.
-```
+```lua
 local info = webp.get_info(image)
 print(info.width, info.height)
 ```
