@@ -1,3 +1,4 @@
+![banner](/docs/images/banner.webp)
 # Defold-WebP
 
 A Defold extension for using WebP images. Uses [libwebp-1.6.0](https://github.com/webmproject/libwebp).
