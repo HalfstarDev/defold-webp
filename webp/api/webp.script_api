@@ -20,9 +20,9 @@
     type: function
     desc: Encodes buffer to WebP image.
     parameters:
-    - name: image
-      type: string
-      desc: File data or file path of a WebP image.
+    - name: buffer
+      type: userdata
+      desc: Defold buffer with RGBA stream.
       optional: false
     - name: width
       type: number
