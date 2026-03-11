@@ -1,0 +1,47 @@
+- name: webp
+  type: table
+  desc: A WebP image library.
+  members:
+
+  - name: decode
+    type: function
+    desc: Decodes WebP image to buffer.
+    parameters:
+    - name: image
+      type: string
+      desc: File data or file path of a WebP image.
+      optional: false
+    - name: options
+      type: table
+      desc: Table of WebPDecoderOptions.
+      optional: true
+
+  - name: encode
+    type: function
+    desc: Encodes buffer to WebP image.
+    parameters:
+    - name: image
+      type: string
+      desc: File data or file path of a WebP image.
+      optional: false
+    - name: width
+      type: number
+      desc: Width of buffer image.
+      optional: false
+    - name: height
+      type: number
+      desc: Height of buffer image.
+      optional: false
+    - name: options
+      type: table
+      desc: Table of WebPConfig options.
+      optional: true
+
+  - name: get_info
+    type: function
+    desc: Returns information about WebP image.
+    parameters:
+    - name: image
+      type: string
+      desc: File data or file path of a WebP image.
+      optional: false
